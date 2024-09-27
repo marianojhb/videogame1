@@ -13,13 +13,27 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE sfml-graphics)
-target_compile_features(main PRIVATE cxx_std_17)
+add_executable(videogame1 src/main.cpp
+)
+target_link_libraries(videogame1 PRIVATE sfml-graphics)
+target_compile_features(videogame1 PRIVATE cxx_std_17)
+
+# Añadir rutas adicionales para buscar cabeceras
+#include_directories(/build/_deps/sfml-src/include)
+
+# Definir la ruta de recursos
+set(RESOURCES_DIR "${CMAKE_SOURCE_DIR}/resources")
+
+# Añadirlo como un define para que esté disponible en el código C++
+add_definitions(-DRESOURCES_DIR=${RESOURCES_DIR})
+
+# Incluir directorios y añadir el ejecutable
+include_directories(${CMAKE_SOURCE_DIR}/src)
+add_executable(my_sfml_project src/main.cpp)
 
 if(WIN32)
     add_custom_command(
-        TARGET main
+        TARGET videogame1
         COMMENT "Copy OpenAL DLL"
         PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:main>
         VERBATIM)

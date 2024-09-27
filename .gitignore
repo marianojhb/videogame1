@@ -4,3 +4,71 @@ out
 .idea
 .vs
 .vscode
+
+.gitignore
+
+# Archivos de compilación
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+*.pdb
+*.exe
+
+# Directorios de compilación
+/build/
+/bin/
+/lib/
+
+# Archivos de configuración de CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Archivos generados por IDEs
+.idea/
+*.suo
+*.user
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.userprefs
+
+# Archivos temporales de editor
+*~
+*.swp
+*.swo
+*.tmp
+
+# Archivos de log
+*.log
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configuración específica de macOS
+*.DS_Store
+
+# Archivos de proyecto de Visual Studio (si corresponde)
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.filters
+
+# Otros archivos específicos
+*.gch
+*.gcno
+*.gcda
+*.gcov
+*.d
+

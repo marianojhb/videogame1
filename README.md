@@ -22,3 +22,9 @@ Este proyecto es un clon del famoso videojuego 1945, adaptado a 2024. Es una apl
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/marianojhb/videojuego1.git
+
+## Recursos utilizados
+
+- Compiler [CMake v3.30.2](https://cmake.org/)
+- Game engine [SFML v2.6.2](https://www.sfml-dev.org/)
+- Game art en [OpenGameArt.org](https://opengameart.org "Game sprites")
