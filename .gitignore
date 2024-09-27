@@ -22,6 +22,7 @@ out
 /build/
 /bin/
 /lib/
+/cmake-build-debug/
 
 # Archivos de configuración de CMake
 CMakeFiles/
